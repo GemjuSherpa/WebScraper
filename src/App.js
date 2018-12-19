@@ -1,8 +1,8 @@
 import React, { Component } from "react";
 import "./App.css";
 
-import UrlForm from "./UrlSearchForm";
-import Header from "./Header";
+import UrlForm from "./components/UrlSearchForm";
+import Header from "./components/Header";
 
 class App extends Component {
   render() {

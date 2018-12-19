@@ -22,12 +22,14 @@ p {
   font-size: 28px;
 }
 
-.text-input {
-  top: 35%;
+.form-group {
   width: 50%;
-  left: 25%;
 }
 
+.input {
+  margin-left: 25%;
+  margin-top: 20%;
+}
 #root {
   height: 100vh;
 }
