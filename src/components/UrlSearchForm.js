@@ -1,5 +1,7 @@
 import React, { Component } from "react";
 import "../App.css";
+// import request from "request";
+import { Consumer } from "../context";
 
 class UrlSearchForm extends Component {
   constructor() {
@@ -10,13 +12,21 @@ class UrlSearchForm extends Component {
     };
   }
 
+  // scrap(url) {
+  //   request(url, (err, res, html) => {
+  //     if (!err && res.statusCode === 200) {
+  //       console.log(html);
+  //     }
+  //   });
+  // }
+
   onChange = e => {
     this.setState({ [e.target.name]: e.target.value });
   };
 
   onSubmit = e => {
     e.preventDefaults();
-    alert(this.state.url);
+    this.props.history.push("/results");
   };
 
   render() {
@@ -43,6 +53,12 @@ class UrlSearchForm extends Component {
             </div>
           </div>
         </form>
+        <Consumer>
+          {value => {
+            console.log(value);
+            return <p>Hello</p>;
+          }}
+        </Consumer>
       </div>
     );
   }
